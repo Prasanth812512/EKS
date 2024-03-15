@@ -50,7 +50,7 @@ resource "aws_instance" "kubectl-server" {
     connection {
       type        = "ssh"
       user        = "ubuntu" # or the appropriate user for your AMI
-      private_key = file("/Modules/eks/keys")
+      private_key = file("./keys")
       host        = self.public_ip
     }
   }
